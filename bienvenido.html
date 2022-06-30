@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Estilos/bienvenido.css" href="index.html">
+    <title>Bienvenido</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <enlace rel="preconectar" href="https://fonts.googleapis.com">
+        <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+<header class="header">
+    <div class="contenedor head">
+        <h1 class="titulo">EMPRESA ROMAWI</h1>
+        <p class="copy">Ya formas parte de nuestra comunidad
+        </p>
+    </div>
+    </header>
+    <main>
+        <section class="contenedor" id="servicio">
+            <h2 class="subtitulo">Sobre Nuestra Compañia</h2>
+            <div class="contenedor-servicio">
+            <img src="/imagenes/Designer _Flatline.svg" alt="">
+            <div class="checklist-servicio"> 
+                <div class="service">
+                <h3 class="n-service"><span class="number">1</span>Nuestra Compañia</h3>
+                <p>Gestionamos la construcción de casas y edificios, realizando estudios de rentabilidad, solución de financiamiento para la construcción, obtención de licencias y permisos, entre otros servicios.</p>
+                </div>
+                <div class="service">
+                <h3 class="n-service"><span class="number">2</span>Nuestros Servicios</h3>
+                <p>Contamos con un equipo de trabajo con mucha experiencia y consiente del trabajo que realiza cada uno en su especialidad y área de trabajo, entregando obras de calidad, Además, realizamos diferentes servicios y te asesoramos sobre tu proyecto.</p>
+                </div>
+                <div class="service">
+                <h3 class="n-service"><span class="number">3</span> Proyectos</h3>
+                <p>Proyecto multifamiliar que se encuentra en construcción en el tradicional pueblo de Sachaca, que contará con una infraestructura segura y de calidad. Además, de diferentes métodos de seguridad para la tranquilidad de los residentes en los departamentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="gallery" id="galeria">
+        <div class="contenedor">
+            <h2 class="subtitulo">Galeria</h2>
+            <div class="contenedor-galeria">
+            <img src="/Imagenes/uno.jpg" alt="" class="img-galeria">
+            <img src="/Imagenes/dos.jpg" alt="" class="img-galeria">
+            <img src="/Imagenes/tres.jpg" alt="" class="img-galeria">
+            <img src="/Imagenes/cuatro.jpg" alt="" class="img-galeria">
+            <img src="/Imagenes/cinco.jpg" alt="" class="img-galeria">
+            <img src="/Imagenes/seis.jpg" alt="" class="img-galeria">
+            </div>
+        </div>
+    </section>
+
+    <section class="imagen-light">
+    <img src="/Imagenes/womawi.png" alt="" class="agregar-imagen"> 
+    </section>
+    <section class="contenedor" id="expertos">
+        <h2 class="subtitulo">Expertos en:</h2>
+        <section class="experts">
+            <div class="cont-expert">
+            <img src="/Imagenes/one.svg" alt="">
+            <h3 class="n-expert">Construcción de Obra</h3>
+            </div>
+            <div class="cont-expert">
+            <img src="/Imagenes/two.svg" alt="">
+            <h3 class="n-expert">Trámites Para Licencia de Obra</h3>
+            </div>
+            <div class="cont-expert">
+            <img src="/Imagenes//three.svg" alt="">
+            <h3 class="n-expert">Asesoría Financiera</h3>
+            </div>
+        </section>
+    </section>
+</main>
+<footer id="contacto">
+    <div class="contenedor footer-content">
+    <div class="contact-us">
+    <h2 class="brand">Andree David Macedo Quiñones</h2>
+    <p>BIENVENIDO A MI PAGINA</p>
+    </div>
+    <div class="social media">
+    <a href="./incio.html" class="social-media-icon">
+        <i class='bx bxl-facebook'></i>
+    </a>
+    
+    <a href="./incio.html" class="social-media-icon">
+        <i class='bx bxl-twitter'></i>
+    </a>
+    
+    <a href="./incio.html" class="social-media-icon">
+        <i class='bx bxl-instagram'></i>
+    </a>
+    </div>
+    </div>
+    <div class="line"></div>
+</footer>
+    <button id="salir">SALIR</button>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBtCL0slhwrJmxQ1dZVYqwDClNzezfC39c",
+            authDomain: "clientes-a19cc.firebaseapp.com",
+            projectId: "clientes-a19cc",
+            storageBucket: "clientes-a19cc.appspot.com",
+            messagingSenderId: "153369739188",
+            appId: "1:153369739188:web:e64c351062a30a31f33ce1"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById("salir").addEventListener("click", function(){
+        signOut(auth).then(() => {
+            window.open("/index.html")
+        }).catch((error) => {
+        // An error happened.
+        });
+        })
+        </script>
+    
+</body>
+</html>
